@@ -145,7 +145,7 @@ public class TouchDrawActivity extends Activity {
         LinearLayout buttonBar = new LinearLayout(this);
 
         Button doneButton = new Button(this);
-        doneButton.setText("Done");
+        doneButton.setText("Conferma");
         doneButton.setBackgroundColor(Color.GREEN);
         doneButton.setLayoutParams(new LinearLayout.LayoutParams(
                 0, ViewGroup.LayoutParams.MATCH_PARENT, (float) 0.30));
@@ -157,7 +157,7 @@ public class TouchDrawActivity extends Activity {
         });
 
         Button eraseButton = new Button(this);
-        eraseButton.setText("Erase");
+        eraseButton.setText("Svuota");
         eraseButton.setBackgroundColor(Color.GRAY);
         eraseButton.setLayoutParams(new LinearLayout.LayoutParams(
                 0, ViewGroup.LayoutParams.MATCH_PARENT, (float) 0.30));
@@ -169,7 +169,7 @@ public class TouchDrawActivity extends Activity {
         });
 
         Button cancelButton = new Button(this);
-        cancelButton.setText("Cancel");
+        cancelButton.setText("Cancella");
         cancelButton.setBackgroundColor(Color.RED);
         cancelButton.setLayoutParams(new LinearLayout.LayoutParams(
                 0, ViewGroup.LayoutParams.MATCH_PARENT, (float) 0.30));
