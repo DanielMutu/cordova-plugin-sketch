@@ -60,7 +60,7 @@ public class TouchDrawActivity extends Activity {
     private int a, r, g, b; //Decoded ARGB color values for the background and erasing
 
     // Labels and values for stroke colour and width selection buttons
-    private static final String[] STROKE_COLOUR_LABELS = {"RED", "BLUE", "GREEN", "BLACK"};
+    private static final String[] STROKE_COLOUR_LABELS = {"ROSSO", "BLU", "VERDE", "NERO"};
     private static final int[] STROKE_COLOUR_VALUES = {Color.RED, Color.BLUE, Color.GREEN, Color.BLACK};
     private static final String[] STROKE_WIDTH_LABELS = {"0.5x", "1x", "2x", "8x"};
     private static final Integer[] STROKE_WIDTH_VALUES = {2, 4, 8, 32};
@@ -198,7 +198,7 @@ public class TouchDrawActivity extends Activity {
     }
 
     public Spinner createColourSpinner() {
-        final String strokeColourLabelPrefix = "COLOUR: ";
+        final String strokeColourLabelPrefix = "COLOR: ";
         Spinner spinner = new Spinner(this);
 
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
@@ -207,7 +207,7 @@ public class TouchDrawActivity extends Activity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView v = (TextView) super.getView(position, convertView, parent);
 
-                v.setText(strokeColourLabelPrefix + "BLUE");
+                v.setText(strokeColourLabelPrefix + "BLU");
                 return v;
             }
 
@@ -241,13 +241,13 @@ public class TouchDrawActivity extends Activity {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 0, ViewGroup.LayoutParams.MATCH_PARENT, (float) 0.30);
         spinner.setLayoutParams(layoutParams);
-        spinner.setSelection(Arrays.asList(STROKE_COLOUR_LABELS).indexOf("BLUE"));
+        spinner.setSelection(Arrays.asList(STROKE_COLOUR_LABELS).indexOf("BLU"));
 
         return spinner;
     }
 
     public Spinner createWidthSpinner() {
-        final String strokeWidthLabelPrefix = "WIDTH: ";
+        final String strokeWidthLabelPrefix = "LINEA ";
         Spinner spinner = new Spinner(this);
 
         final ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
